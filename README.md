@@ -1,2 +1,2 @@
-# percetron-xor
-Classifier using the percetron to simulate the XOR gate
+# Percetron XOR
+Classifier using the percetron simulating the XOR logical gate.

@@ -9,8 +9,6 @@ w = repmat(initial_weights, number_of_perceptrons, 1);
 
 bias =1;
 
-syms a y
-
 class = ['x','o'];
 c =[0 1 1 0];
 
@@ -36,12 +34,22 @@ for i=1: number_iterations
     
 end
 
-ec = w(1,1)+w(1,2)*y+w(1,3)*a; hold on
-ezplot(ec, [ 0 1 0 1]);
-ec = w(2,1)+w(2,2)*y+w(2,3)*a;
-ezplot(ec, [ 0 1 0 1]);
-title('XOR')
+xx = linspace(-0.5,1.5,100);
 
+slope_or = -(w(1,3)/w(1,2))
+intercept_or = -w(1,1)/w(1,2)
+y_or = (slope_or * xx) + intercept_or 
+
+slope_and = -(w(2,3)/w(2,2))
+intercept_and = -w(2,1)/w(2,2)
+y_and = (slope_and * xx) + intercept_and
+
+plot(xx, y_or);hold on
+plot(xx, y_and);
+
+hold off
+
+title(XOR)
 
 
 

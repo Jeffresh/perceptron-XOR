@@ -1,6 +1,6 @@
 clear, close all;
 
-number_iterations = 50;
+number_iterations = 1000;
 number_of_perceptrons = 4;
 max_number_of_inputs =3;
 
